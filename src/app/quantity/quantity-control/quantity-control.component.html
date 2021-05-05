@@ -1,0 +1,11 @@
+<div>
+  <button [disabled]="quantity ===0" (click)="toggleQuantity(false)" mat-raised-button href="javascript:void()">
+    <mat-icon>arrow_downward</mat-icon>
+  </button>
+  &nbsp;&nbsp;
+  {{quantity}}
+  &nbsp;&nbsp;
+  <button (click)="toggleQuantity(true)" mat-raised-button href="javascript:void()">
+    <mat-icon>arrow_upward</mat-icon>
+  </button>
+</div>

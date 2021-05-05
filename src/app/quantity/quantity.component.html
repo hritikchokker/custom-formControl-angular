@@ -1,0 +1,19 @@
+<div class="quantity-wrapper">
+  <h1>Quantity</h1>
+
+  <app-quantity-control [formControl]="quantityControl"></app-quantity-control>
+  <mat-error *ngIf="quantityControl.hasError('lessThanMax')">
+    Quantity should be less than max(variable) length
+  </mat-error>
+</div>
+<h3>
+  Current Quantity is {{quantityControl?.value}}
+  <br>
+  status {{quantityControl?.status}}
+  <br>
+  isTouched {{quantityControl?.touched}}
+  <br>
+  isPristine {{quantityControl?.pristine}}
+  <br>
+  dirty {{quantityControl?.dirty}}
+</h3>

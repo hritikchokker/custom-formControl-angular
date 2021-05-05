@@ -16,6 +16,11 @@ const routes: Routes = [
     loadChildren: () => import('./star-rating/star-rating.module').then(m => m.StarRatingModule)
   },
   {
+    path: 'quantity',
+    loadChildren: () => import('./quantity/quantity.module').then(m => m.QuantityModule)
+
+  },
+  {
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
   }
