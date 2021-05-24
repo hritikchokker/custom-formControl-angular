@@ -1,0 +1,16 @@
+<div fxLayout="column" class="container" fxLayoutAlign="center center">
+  <div fxFlex="100%" class="container__first">
+    <form [formGroup]="form">
+      <mat-form-field appearance="fill">
+        <mat-label>Phone number</mat-label>
+        <app-mobileno-masking formControlName="tel" required></app-mobileno-masking>
+        <mat-icon matSuffix>phone</mat-icon>
+        <mat-hint>Include area code</mat-hint>
+      </mat-form-field>
+    </form>
+    <ng-container *ngIf="form">
+      {{form?.value |json}}
+    </ng-container>
+
+  </div>
+</div>

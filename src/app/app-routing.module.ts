@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./star-rating/star-rating.module').then(m => m.StarRatingModule)
   },
   {
+    path: 'input-masking',
+    loadChildren: () => import('./input-masking/input-masking.module').then(m => m.InputMaskingModule)
+  },
+  {
     path: 'quantity',
     loadChildren: () => import('./quantity/quantity.module').then(m => m.QuantityModule)
 

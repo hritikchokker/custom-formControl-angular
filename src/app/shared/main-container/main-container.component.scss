@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+}
+.mat-nav-list {
+  a {
+    display: block;
+    font-size: 1.5rem;
+    // margin: 20px;
+    padding: 20px;
+  }
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.main-container {
+  padding: 20px;
+}
+span {
+  a {
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+}
