@@ -1,0 +1,25 @@
+<form [formGroup]="formGroup">
+  <!-- <mat-form-field> -->
+  <div class="picker-container">
+    <app-time-picker formControlName="timer"></app-time-picker>
+    <ng-container *ngIf="formGroup.get('timer') ">
+      <mat-error *ngIf="formGroup?.get('timer')?.hasError('required')&& formGroup?.get('timer')?.touched">
+        Time is Required
+        <!-- Time {{formGroup.get('timer')?.value|json}} -->
+      </mat-error>
+    </ng-container>
+
+    <h3>
+      Current Time is {{timeControl?.value}}
+      <br>
+      status {{timeControl?.status}}
+      <br>
+      isTouched {{timeControl?.touched}}
+      <br>
+      isPristine {{timeControl?.pristine}}
+      <br>
+      dirty {{timeControl?.dirty}}
+    </h3>
+  </div>
+  <!-- </mat-form-field> -->
+</form>

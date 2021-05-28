@@ -1,0 +1,4 @@
+<div class="container">
+  <input (blur)="onTouched()" [class.error-state]="!noValidationError" name="time" (input)="onValueChange($event)"
+    #timePickerRef type="time" name="" id="">
+</div>

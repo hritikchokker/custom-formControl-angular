@@ -20,9 +20,12 @@ const routes: Routes = [
     loadChildren: () => import('./input-masking/input-masking.module').then(m => m.InputMaskingModule)
   },
   {
+    path: 'time-picker',
+    loadChildren: () => import('./time-picker-example/time-picker-example.module').then(m => m.TimePickerExampleModule)
+  },
+  {
     path: 'quantity',
     loadChildren: () => import('./quantity/quantity.module').then(m => m.QuantityModule)
-
   },
   {
     path: '**',
