@@ -1,1 +1,33 @@
-<p>address works!</p>
+<!-- <div formGroupName="address" class="container" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlexFill>
+    <input formControlName="street" type="text" placeholder="enter here" />
+  </div>
+  <div fxFlexFill>
+    <input formControlName="city" type="text" placeholder="enter here" />
+  </div>
+  <div fxFlexFill>
+    <input formControlName="state" type="text" placeholder="enter here" />
+  </div>
+</div> -->
+
+<div fxLayout="row wrap" fxLayoutAlign="center start" fxFlexFill fxLayout.md.xs.sm="column" formGroupName="address">
+  <div class="form-element" *ngIf="form && form?.controls && form?.controls?.street">
+    <mat-form-field>
+      <mat-label>Street</mat-label>
+      <input formControlName="street" type="text" matInput />
+    </mat-form-field>
+  </div>
+  <div class="form-element" *ngIf="form && form?.controls && form?.controls?.city">
+    <mat-form-field>
+      <mat-label>City</mat-label>
+      <input formControlName="city" type="text" matInput />
+    </mat-form-field>
+  </div>
+  <div class="form-element" *ngIf="form && form?.controls && form?.controls?.state">
+    <mat-form-field>
+      <mat-label>State</mat-label>
+      <input formControlName="state" type="text" matInput />
+    </mat-form-field>
+  </div>
+
+</div>

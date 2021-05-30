@@ -1,0 +1,26 @@
+.mat-card {
+  margin: auto;
+  margin-top: 5vh;
+  max-width: 500px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #fcdf8a 0%, #f38381 100%);
+  text-align: center;
+  border-radius: 20px;
+  &__header {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__form-container {
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &__form-element {
+    padding: 10px;
+  }
+}
+
+.mat-card:hover {
+  transform: scale(1.01);
+  transition: 0.5s all ease;
+}

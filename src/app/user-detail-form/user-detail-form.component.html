@@ -1,0 +1,49 @@
+<mat-card class="mat-card">
+  <mat-card-header>
+    <div class="mat-card__header">
+      <mat-card-title>User Detail</mat-card-title>
+      <mat-card-subtitle>Fill You Details</mat-card-subtitle>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div [formGroup]="detailForm" fxLayout="row wrap" fxLayoutAlign="center start" fxFlexFill fxLayout.md.xs.sm="column"
+      class="mat-card__form-container">
+      <div class="mat-card__form-element">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input formControlName="firstName" matInput type="text">
+        </mat-form-field>
+      </div>
+      <div class="mat-card__form-element">
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input formControlName="lastName" matInput type="text">
+        </mat-form-field>
+      </div>
+      <div class="mat-card__form-element">
+        <mat-form-field>
+          <mat-label>Mobile</mat-label>
+          <input formControlName="mobile" matInput type="number">
+        </mat-form-field>
+      </div>
+      <div class="mat-card__form-element">
+        <mat-form-field>
+          <mat-label>Age</mat-label>
+          <input formControlName="age" matInput type="text">
+        </mat-form-field>
+      </div>
+      <app-address formGroupName="address"></app-address>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <button mat-rai -->
+    <button mat-button>
+      cancel
+    </button>
+    <button mat-raised-button color="primary">Submit</button>
+
+  </mat-card-actions>
+  <mat-card-footer>
+    {{detailForm?.value |json}}
+  </mat-card-footer>
+</mat-card>

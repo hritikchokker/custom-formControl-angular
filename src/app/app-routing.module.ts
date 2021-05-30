@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'address',
-    loadChildren: () => import('./address/address.module').then(m => m.AddressModule)
+    loadChildren: () => import('./user-detail-form/user-detail-form.module').then(m => m.UserDetailFormModule)
   },
   {
     path: 'rating',
